@@ -13,11 +13,14 @@ test("should setup remove expense action object", () => {
 });
 
 test("should setup edit expense action object", () => {
-  const action = modifyExpense("123qwe", { createdAt: 12345, note: "alabala" });
+  const action = modifyExpense("123qwe", {
+    createdAt: 123456,
+    note: "alabala",
+  });
   expect(action).toEqual({
     type: "MODIFY_EXPENSE",
     id: "123qwe",
-    updates: { createdAt: 12345, note: "alabala" },
+    updates: { createdAt: 123456, note: "alabala" },
   });
 });
 

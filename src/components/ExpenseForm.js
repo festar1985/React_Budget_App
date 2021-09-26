@@ -3,7 +3,6 @@ import React from "react";
 import { useState } from "react";
 import moment from "moment";
 import { SingleDatePicker } from "react-dates";
-import "react-dates/lib/css/_datepicker.css";
 
 const ExpenseForm = (props) => {
   const [state, setState] = useState({

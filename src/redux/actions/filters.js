@@ -1,6 +1,6 @@
 export const filterText = (text = "") => ({ type: "FILTER_TEXT", text });
 
-export const sortByAmount = () => ({ type: "SORT_BY_AMOUT" });
+export const sortByAmount = () => ({ type: "SORT_BY_AMOUNT" });
 
 export const sortByDate = () => ({ type: "SORT_BY_DATE" });
 
