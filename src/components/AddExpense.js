@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import ExpenseForm from "./ExpenseForm";
-import { addExpense } from "../redux/actions/expenses";
+import { startAddExpense } from "../redux/actions/expenses";
 
 export const AddExpense = (props) => (
   <div>
@@ -18,7 +18,7 @@ export const AddExpense = (props) => (
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSubmit: (expense) => dispatch(addExpense(expense)),
+    onSubmit: (expense) => dispatch(startAddExpense(expense)),
   };
 };
 

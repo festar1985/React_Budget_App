@@ -1,3 +1,5 @@
 node_modules
 build
 server
+
+src/firebase/firebaseConfig.json

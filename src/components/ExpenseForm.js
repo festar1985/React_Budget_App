@@ -93,7 +93,7 @@ const ExpenseForm = (props) => {
             })
           }
         ></textarea>
-        <button>Add Expense</button>
+        <button>{props.modify ? "Modify Expense" : "Add Expense"}</button>
       </form>
     </div>
   );

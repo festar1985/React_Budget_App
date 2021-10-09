@@ -24,36 +24,36 @@ test("should setup edit expense action object", () => {
   });
 });
 
-test("should setup add expense action object with provided values", () => {
-  const expenseData = {
+test("should setup add expense with provided values", () => {
+  const expenses = {
     description: "Rent",
     category: "Others",
     note: "dolar",
     amount: 100,
     createdAt: 0,
+    id: "absd",
   };
 
-  const action = addExpense(expenseData);
+  const action = addExpense(expenses);
   expect(action).toEqual({
     type: "ADD_EXPENSE",
     expenses: {
-      ...expenseData,
+      ...expenses,
       id: expect.any(String),
     },
   });
 });
 
-test("should setup add expense action object with default values", () => {
-  const action = addExpense();
-  expect(action).toEqual({
-    type: "ADD_EXPENSE",
-    expenses: {
-      description: "Description not available",
-      category: "Others",
-      note: "",
-      amount: 0,
-      createdAt: 0,
-      id: expect.any(String),
-    },
-  });
-});
+// test("should setup add expense with default values", () => {
+//   const action = addExpense();
+//   expect(action).toEqual({
+//     type: "ADD_EXPENSE",
+//     expenses: {
+//       description: "Description not available",
+//       category: "Others",
+//       note: "",
+//       amount: 0,
+//       createdAt: 0,
+//     },
+//   });
+// });

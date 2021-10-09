@@ -1,22 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import ExpenseForm from "./ExpenseForm";
-import { modifyExpense, removeExpense } from "../redux/actions/expenses";
+import {
+  startModifyExpense,
+  startRemoveExpense,
+} from "../redux/actions/expenses";
 
 const EditExpense = (props) => {
   return (
     <div>
       <ExpenseForm
+        modify={true}
         expense={props.expenses}
         onSubmit={(expense) => {
-          props.dispatch(modifyExpense(props.expenses.id, expense));
+          props.dispatch(startModifyExpense(props.expenses.id, expense));
           props.history.push("/");
         }}
       ></ExpenseForm>
 
       <button
         onClick={() => {
-          props.dispatch(removeExpense(props.expenses.id));
+          props.dispatch(startRemoveExpense(props.expenses.id));
           props.history.push("/");
         }}
       >
