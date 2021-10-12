@@ -1,14 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import AppRouter from "./routers/AppRouter";
+import AppRouter, { history } from "./routers/AppRouter";
 import configureStore from "./redux/store/configureStore";
 import "./firebase/firebase";
 import "normalize.css";
 import "react-dates/lib/css/_datepicker.css";
 import "./styles/style.scss";
 import { startSetExpenses } from "../src/redux/actions/expenses";
+import { login, logout } from "../src/actions/authentication";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 const store = configureStore();
+
+let hasRendered = false;
+
+const rederApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById("root"));
+    hasRendered = true;
+  }
+};
 
 const jsx = (
   <Provider store={store}>
@@ -23,6 +35,18 @@ const loading = async () => {
   return true;
 };
 
-loading().then(() => {
-  ReactDOM.render(jsx, document.getElementById("root"));
+onAuthStateChanged(getAuth(), (user) => {
+  if (user) {
+    store.dispatch(login(user.uid));
+    loading().then(() => {
+      rederApp();
+      if (history.location.pathname === "/") {
+        history.push("/dashboard");
+      }
+    });
+  } else {
+    store.dispatch(logout());
+    rederApp();
+    history.push("/");
+  }
 });
