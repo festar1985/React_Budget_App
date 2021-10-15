@@ -14,6 +14,10 @@ export const logout = () => ({
   type: "LOGOUT",
 });
 
+export const clearExpenseState = () => ({
+  type: "CLEAR",
+});
+
 export const startLogOut = () => {
   return () => signOut(getAuth());
 };

@@ -19,6 +19,8 @@ const expensesReducer = (state = expenseReducerDefaultState, action) => {
           return expenses;
         }
       });
+    case "CLEAR":
+      return [];
     default:
       return state;
   }

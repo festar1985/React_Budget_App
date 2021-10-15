@@ -8,9 +8,8 @@ export const AddExpense = (props) => (
     <h1>Add an expense</h1>
     <ExpenseForm
       onSubmit={(expense) => {
-        //props.dispatch(addExpense(expense));
         props.onSubmit(expense);
-        props.history.push("/");
+        props.history.push("/dashboard");
       }}
     />
   </div>

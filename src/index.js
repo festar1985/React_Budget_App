@@ -8,7 +8,11 @@ import "normalize.css";
 import "react-dates/lib/css/_datepicker.css";
 import "./styles/style.scss";
 import { startSetExpenses } from "../src/redux/actions/expenses";
-import { login, logout } from "../src/actions/authentication";
+import {
+  login,
+  logout,
+  clearExpenseState,
+} from "../src/actions/authentication";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const store = configureStore();
@@ -46,6 +50,7 @@ onAuthStateChanged(getAuth(), (user) => {
     });
   } else {
     store.dispatch(logout());
+    store.dispatch(clearExpenseState());
     rederApp();
     history.push("/");
   }
