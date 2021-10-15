@@ -4,7 +4,7 @@ import { startLogin } from "../actions/authentication";
 
 const LoggingPage = (props) => {
   return (
-    <div>
+    <div className="box-layout">
       <h1> Welcome to the Budget App please login</h1>
       <button onClick={props.startLogin}>Login</button>
     </div>
