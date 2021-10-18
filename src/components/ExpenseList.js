@@ -4,9 +4,17 @@ import ExpensesListItem from "./ExpenseListItem";
 import getVisibleExpenses from "../redux/selectors/expenses";
 
 export const ExpenseList = (props) => (
-  <div>
+  <div className="content-container ">
+    <div className="list-header">
+      <div className="show-on-mobile">Expenses</div>
+      <div className="show-on-desktop">Expense</div>
+      <div className="show-on-desktop">Category</div>
+      <div className="show-on-desktop">Amount</div>
+    </div>
     {props.expenses.length === 0 ? (
-      <p>There are no expenses to show</p>
+      <div className="list-item lits-item__message">
+        <span>There are no expenses to show</span>
+      </div>
     ) : (
       props.expenses.map((element) => {
         return <ExpensesListItem key={element.id} {...element} />;

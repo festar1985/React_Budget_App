@@ -9,6 +9,11 @@ import {
 const EditExpense = (props) => {
   return (
     <div>
+      <div className="page-header">
+        <div className="content-container">
+          <h1>Modify an expense</h1>
+        </div>
+      </div>
       <ExpenseForm
         modify={true}
         expense={props.expenses}
@@ -18,14 +23,17 @@ const EditExpense = (props) => {
         }}
       ></ExpenseForm>
 
-      <button
-        onClick={() => {
-          props.dispatch(startRemoveExpense(props.expenses.id));
-          props.history.push("/dashboard");
-        }}
-      >
-        Remove
-      </button>
+      <div className="content-container">
+        <button
+          className="form-button"
+          onClick={() => {
+            props.dispatch(startRemoveExpense(props.expenses.id));
+            props.history.push("/dashboard");
+          }}
+        >
+          Remove Expense
+        </button>
+      </div>
     </div>
   );
 };

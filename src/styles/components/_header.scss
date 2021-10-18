@@ -1,0 +1,46 @@
+.header {
+  background: $main-color;
+  background-color: $main-color;
+  text-align: center;
+  height: 80px;
+}
+
+.header__buttons {
+  background-color: $main-color;
+  border: none;
+  color: $secondary-color;
+  text-align: center;
+  text-decoration: none;
+  font-size: $m-size;
+  padding: 30px;
+  width: auto;
+  line-height: 1.6;
+  display: inline-block;
+  margin: 0;
+}
+
+.header__title {
+  color: $secondary-color;
+  margin-top: 15px;
+  font-size: $l-size;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 80px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.header__logo {
+  width: auto;
+}
+.logo {
+  float: left;
+}

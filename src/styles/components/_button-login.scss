@@ -1,0 +1,16 @@
+.button-login {
+  background-color: floralwhite;
+  border: none;
+  color: green;
+  text-align: center;
+  text-decoration: none;
+  font-size: $m-size;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button-login:hover {
+  background-color: green;
+  color: white;
+}

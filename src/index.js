@@ -1,3 +1,4 @@
+import "react-app-polyfill/ie9";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -14,6 +15,8 @@ import {
   clearExpenseState,
 } from "../src/actions/authentication";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import "typeface-roboto";
+import LoadingPage from "./components/LoadingPage";
 
 const store = configureStore();
 
@@ -32,7 +35,7 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("root"));
+ReactDOM.render(<LoadingPage />, document.getElementById("root"));
 
 const loading = async () => {
   store.dispatch(startSetExpenses());

@@ -8,7 +8,6 @@ import PageNotFound from "../components/PageNotFound";
 import LoggingPage from "../components/LoggingPage";
 import { createBrowserHistory } from "history";
 import PrivatRoute from "./PrivatRoute";
-import PublicRoute from "./PublicRoute";
 
 export const history = createBrowserHistory();
 

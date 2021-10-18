@@ -10,16 +10,28 @@ export const ExpensesSummary = (props) => {
   );
 
   return (
-    <div>
-      {props.expenses.length === 0 ? (
-        <div></div>
-      ) : (
-        <h1>
-          {props.expenses.length === 1
-            ? `Viewing 1 expense in total = ${totalAmount} `
-            : `Viewing ${props.expenses.length} expenses in total = ${totalAmount} `}
-        </h1>
-      )}
+    <div className="page-header">
+      <div className="content-container">
+        {props.expenses.length === 0 ? (
+          <div></div>
+        ) : (
+          <h1 className="page-header__title">
+            {props.expenses.length === 1 ? (
+              <div>
+                Viewing 1 expense in total = €
+                <span className="page-variable">{totalAmount}</span>
+              </div>
+            ) : (
+              <div>
+                Viewing{" "}
+                <span className="page-variable">{props.expenses.length}</span>{" "}
+                expenses in total ={" "}
+                <span className="page-variable">€{totalAmount}</span>
+              </div>
+            )}
+          </h1>
+        )}
+      </div>
     </div>
   );
 };

@@ -20,6 +20,7 @@
     "raf": "^3.4.1",
     "react": "^16.14.0",
     "react-addons-shallow-compare": "^15.6.3",
+    "react-app-polyfill": "^2.0.0",
     "react-dates": "^21.8.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.4",
@@ -30,6 +31,7 @@
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "sass": "^1.35.1",
+    "typeface-roboto": "^1.1.13",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },

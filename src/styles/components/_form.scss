@@ -1,0 +1,25 @@
+.form__error {
+  margin: 0 0 $m-size 0;
+  font-style: italic;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin: 0 0 $m-size 0;
+  }
+}
+
+.form-button {
+  background-color: $main-color;
+  border: none;
+  color: $secondary-color;
+  text-align: center;
+  text-decoration: none;
+  font-size: $m-size;
+  padding: 15px;
+  width: auto;
+  display: inline-block;
+  width: 160px;
+}

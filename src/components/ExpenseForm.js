@@ -45,10 +45,15 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <div>
-      {errorState.error && <p>Please fill both description and ammound</p>}
-      <form onSubmit={onSubmit}>
+    <div className="content-container">
+      <form className="form" onSubmit={onSubmit}>
+        {errorState.error && (
+          <p className="form__error">
+            Please note that both description and amount are mandatory
+          </p>
+        )}
         <input
+          className="text-input form__element"
           type="text"
           placeholder="Description"
           autoFocus
@@ -61,6 +66,7 @@ const ExpenseForm = (props) => {
           }
         ></input>
         <input
+          className="text-input form__element"
           type="text"
           placeholder="Amount"
           value={state.amount}
@@ -84,6 +90,7 @@ const ExpenseForm = (props) => {
           isOutsideRange={() => false}
         />
         <textarea
+          className="text-area-input form__element"
           placeholder="Add a note (optional)"
           value={state.note}
           onChange={(e) =>
@@ -93,7 +100,11 @@ const ExpenseForm = (props) => {
             })
           }
         ></textarea>
-        <button>{props.modify ? "Modify Expense" : "Add Expense"}</button>
+        <div>
+          <button className="form-button ">
+            {props.modify ? "Modify Expense" : "Add Expense"}
+          </button>
+        </div>
       </form>
     </div>
   );
