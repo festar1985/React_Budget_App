@@ -1,5 +1,5 @@
 node_modules
 build
 server
-
+.env
 src/firebase/firebaseConfig.json
