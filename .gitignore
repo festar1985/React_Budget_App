@@ -3,3 +3,4 @@ build
 server
 .env
 src/firebase/firebaseConfig.json
+package-lock.json
