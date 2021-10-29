@@ -1,5 +1,4 @@
 .box-layout {
-  background: $main-color;
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -9,13 +8,31 @@
 }
 
 .box-layout__box {
-  background: fade-out($color: $main-color, $amount: 0.35);
-  border-radius: 5px;
-  text-align: center;
-  width: 25rem;
+  background: $main-color;
+  border-radius: 8px;
   padding: $l-size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+}
+.box-main_logo {
+  margin: $m-size 0;
 }
 
 .box-layout__title {
-  margin: $m-size 0;
+  margin: $s-size 0;
+  text-align: center;
+  color: $secondary-color;
+}
+
+.box-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 80%;
+  margin-top: $xl-size;
 }
