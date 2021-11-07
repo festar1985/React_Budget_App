@@ -10,7 +10,7 @@ const Header = (props) => (
       <div className="header__logo">
         <img className="logo" src={logo01} alt="Logo" />
       </div>
-      <div>
+      <div className="header-title-container">
         <h1 className="header__title">Budget App</h1>
       </div>
       <div className="button-container">

@@ -3,6 +3,9 @@
   background-color: $main-color;
   text-align: center;
   height: 80px;
+  @media (max-width: $breakpoint-phone) {
+    height: auto;
+  }
 }
 
 .header__buttons {
@@ -17,12 +20,35 @@
   line-height: 1.6;
   display: inline-block;
   margin: 0;
+
+  @media (max-width: $breakpoint-big-tablet) {
+    padding: 30px 5px 30px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 30px 5px 30px;
+    font-size: 1.3rem;
+  }
 }
 
 .header__title {
   color: $secondary-color;
   margin-top: 15px;
   font-size: $l-size;
+
+  @media (max-width: $breakpoint-big-tablet) {
+    font-size: $l-mobile-size;
+    margin-top: 20px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.8rem;
+    margin-top: 25px;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    font-size: 2.4rem;
+  }
 }
 
 .header-container {
@@ -30,16 +56,32 @@
   justify-content: space-between;
   align-items: stretch;
   height: 80px;
+
+  @media (max-width: $breakpoint-phone) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+  }
 }
 
 .button-container {
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
+  flex-basis: 40%;
+}
+
+.header-title-container {
+  flex-basis: 20%;
 }
 
 .header__logo {
   width: auto;
+  flex-basis: 40%;
+  @media (max-width: $breakpoint-phone) {
+    display: none;
+  }
 }
 .logo {
   float: left;

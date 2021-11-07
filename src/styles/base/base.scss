@@ -27,6 +27,16 @@ button:disabled {
   cursor: default;
 }
 
-// .is-active {
-//   color: red;
-// }
+a:visited {
+  text-decoration: none;
+}
+
+.is-active {
+  color: red;
+}
+
+.text-help {
+  text-align: center;
+  margin-top: 50px;
+  font-size: $m2-size;
+}

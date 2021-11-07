@@ -11,7 +11,9 @@ const EditExpense = (props) => {
     <div>
       <div className="page-header">
         <div className="content-container">
-          <h1>Modify an expense</h1>
+          <h1 className="page-header__title">
+            <div>Modify an expense</div>
+          </h1>
         </div>
       </div>
       <ExpenseForm
