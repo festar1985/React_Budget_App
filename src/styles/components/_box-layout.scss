@@ -5,6 +5,14 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  @media (max-width: $breakpoint-tablet) {
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    padding: 0;
+  }
 }
 
 .box-layout__box {
@@ -17,9 +25,20 @@
   align-items: center;
   gap: 10px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+
+  @media (max-width: $breakpoint-phone) {
+    border-radius: 0px;
+    padding: $s-size $m-size $xl-size $m-size;
+    gap: 3px;
+  }
 }
+
 .box-main_logo {
   margin: $m-size 0;
+
+  @media (max-width: $breakpoint-phone) {
+    margin: $s-size 0;
+  }
 }
 
 .box-layout__title {
@@ -35,4 +54,8 @@
   align-items: stretch;
   width: 80%;
   margin-top: $xl-size;
+
+  @media (max-width: $breakpoint-phone) {
+    margin: $m-size 0;
+  }
 }
