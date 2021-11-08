@@ -5,6 +5,11 @@
   display: flex;
   justify-content: space-between;
   padding: $s-size $m-size;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $s-size;
+    font-size: 1.2rem;
+  }
 }
 
 .list-item {
@@ -22,19 +27,35 @@
   > * {
     flex: 1 1 0;
   }
+  @media (max-width: $breakpoint-tablet) {
+    padding: 8px;
+    font-size: 1.2rem;
+  }
 }
 
 .lits-item__category {
   text-align: center;
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 10px;
+    font-size: 1.2rem;
+  }
 }
 
 .lits-item__amount {
   text-align: right;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
 }
 
 .lits-item__title {
   margin: 0;
   word-break: break-all;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0;
+    font-size: 1.2rem;
+  }
 }
 
 .lits-item__message {

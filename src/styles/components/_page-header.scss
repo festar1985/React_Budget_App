@@ -4,12 +4,20 @@
   padding: $l-size 0;
   margin-bottom: $l-size;
   color: $secondary-color;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $s-size;
+  }
 }
 
 .page-header__title {
   text-align: center;
   margin: 0;
   font-weight: 300;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $m-size;
+  }
 }
 
 .page-variable {
