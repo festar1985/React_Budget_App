@@ -10,6 +10,10 @@
     padding: $s-size;
     font-size: 1.2rem;
   }
+
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1.4rem;
+  }
 }
 
 .list-item {
@@ -31,6 +35,9 @@
     padding: 8px;
     font-size: 1.2rem;
   }
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1.4rem;
+  }
 }
 
 .lits-item__category {
@@ -38,6 +45,9 @@
   @media (max-width: $breakpoint-tablet) {
     padding-top: 10px;
     font-size: 1.2rem;
+  }
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1.4rem;
   }
 }
 
@@ -47,6 +57,9 @@
     padding: 10px;
     font-size: 1.2rem;
   }
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1.4rem;
+  }
 }
 
 .lits-item__title {
@@ -55,6 +68,9 @@
   @media (max-width: $breakpoint-tablet) {
     padding: 0;
     font-size: 1.2rem;
+  }
+  @media (max-width: $breakpoint-phone) {
+    font-size: 1.4rem;
   }
 }
 

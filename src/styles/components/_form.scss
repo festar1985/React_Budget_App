@@ -34,4 +34,10 @@
     width: 120px;
     padding: 12px;
   }
+
+  @media (max-width: $breakpoint-phone) {
+    font-size: $m-size;
+    width: 150px;
+    padding: 12px;
+  }
 }
