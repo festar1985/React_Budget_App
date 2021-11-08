@@ -15,9 +15,7 @@ const LoggingPage = (props) => {
           <h1 className="box-layout__title">
             Welcome to your Budget Application
           </h1>
-          <p className="box-layout__title">
-            Here you will control your expenses
-          </p>
+          <p className="box-layout__title">Your way to control expenses</p>
         </div>
 
         <div className="box-button">

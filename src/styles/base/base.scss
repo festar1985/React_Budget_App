@@ -32,11 +32,14 @@ a:visited {
 }
 
 .is-active {
-  color: red;
+  color: none;
 }
 
 .text-help {
   text-align: center;
   margin-top: 50px;
   font-size: $m2-size;
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $m-size;
+  }
 }
