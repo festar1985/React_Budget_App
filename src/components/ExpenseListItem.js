@@ -10,10 +10,12 @@ const ExpensesListItem = ({ id, description, category, amount, createdAt }) => (
       <span>{moment(createdAt).format("DD.MMM.YYYY")}</span>
     </div>
     <div className="lits-item__category">
-      <h3>{category}</h3>
+      <h3 className="lits-item__title">{category}</h3>
     </div>
     <div className="lits-item__amount">
-      <h3>€{numeral(amount / 100).format("0,0.00")}</h3>
+      <h3 className="lits-item__title">
+        €{numeral(amount / 100).format("0,0.00")}
+      </h3>
     </div>
   </Link>
 );

@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
   margin-bottom: $l-size;
+
+  @media (max-width: $breakpoint-phone) {
+    flex-wrap: wrap;
+    gap: 10px 15px;
+  }
 }
 
 .input-group__item {

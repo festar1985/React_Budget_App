@@ -12,6 +12,7 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-size: $m-size;
   line-height: 1.6;
+  background: $secondary-color;
 }
 
 h1 {
@@ -26,6 +27,19 @@ button:disabled {
   cursor: default;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 .is-active {
-  color: red;
+  color: none;
+}
+
+.text-help {
+  text-align: center;
+  margin-top: 50px;
+  font-size: $m2-size;
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $m-size;
+  }
 }

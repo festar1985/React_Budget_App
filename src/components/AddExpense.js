@@ -7,7 +7,9 @@ export const AddExpense = (props) => (
   <div>
     <div className="page-header">
       <div className="content-container">
-        <h1>Add an expense</h1>
+        <h1 className="page-header__title">
+          <div>Add an expense</div>
+        </h1>
       </div>
     </div>
 

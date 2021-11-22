@@ -1,8 +1,26 @@
 .text-input {
-  border: 1px solid #cacccd;
+  border: 1px solid black;
   height: 48px;
   padding: $s-size;
   font-size: 16px;
+  color: $secondary-color;
+  background-color: $main-color;
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 38px;
+    font-size: 12px;
+    padding: 0;
+  }
+  @media (max-width: $breakpoint-phone) {
+    height: 38px;
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+::placeholder {
+  color: $secondary-color;
+  opacity: 1;
 }
 
 .select-input {

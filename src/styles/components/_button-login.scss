@@ -1,16 +1,30 @@
 .button-login {
-  background-color: floralwhite;
+  background-color: #f5f5f5; // floralwhite;
   border: none;
-  color: green;
+  color: $secondary-color;
   text-align: center;
   text-decoration: none;
   font-size: $m-size;
   padding: 10px 24px;
   border-radius: 8px;
   transition-duration: 0.4s;
+  margin-bottom: $s-size;
+  width: 100%;
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
 }
 
-.button-login:hover {
-  background-color: green;
-  color: white;
+.button-login-hover:hover {
+  background-color: $secondary-color;
+  color: #f5f5f5;
+}
+
+.logging_logo {
+  margin-right: 15px;
+}
+
+.button-temp {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

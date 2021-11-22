@@ -1,11 +1,12 @@
 .show-on-mobile {
-  @media (min-width: $desktop_breakpoint + 0.1rem) {
+  text-align: center;
+  @media (min-width: $breakpoint-phone + 1px) {
     display: none;
   }
 }
 
 .show-on-desktop {
-  @media (max-width: $desktop_breakpoint) {
+  @media (max-width: $breakpoint-phone) {
     display: none;
   }
 }
